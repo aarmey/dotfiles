@@ -1,2 +1,2 @@
-TAGS="transduction macbook"
-EXCLUDES="README.md LICENSE bootstrap.sh mackup-backup pyreqs.txt"
+TAGS="macstudio macbook"
+EXCLUDES="README.md LICENSE bootstrap.sh mackup-backup"
