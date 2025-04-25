@@ -4,6 +4,5 @@ Package Control.last-run
 oscrypto-ca-bundle.crt
 Package Control.merged-ca-bundle
 Package Control.user-ca-bundle
-mackup-backup/Library/Application Support/Sublime Text 3/Packages/User/Package Control.cache
-mackup-backup/Library/Application Support/Sublime Text 3/Packages/User/Projects/recent.json
 vim/plugged
+.DS_Store
