@@ -1,6 +1,4 @@
 {
-    "julia.enableTelemetry": true,
-    "python.pythonPath": "/usr/local/bin/python3",
     "git.autofetch": true,
     "git.confirmSync": false,
     "diffEditor.renderSideBySide": false,
