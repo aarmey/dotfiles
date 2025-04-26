@@ -4,5 +4,7 @@
     "diffEditor.renderSideBySide": false,
     "window.zoomLevel": 0,
     "editor.fontSize": 11,
-    "workbench.tree.indent": 16
+    "workbench.tree.indent": 16,
+    "makefile.configureOnOpen": false,
+    "jupyter.askForKernelRestart": false
 }
