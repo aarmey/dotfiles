@@ -1,5 +1,5 @@
 
-#echo "Applying MacOS defaults"
+echo "Applying MacOS defaults"
 bash ~/.bin/osxdefaults.sh
 
 # Running mackup
