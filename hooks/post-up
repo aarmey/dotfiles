@@ -1,6 +1,6 @@
 
 #echo "Applying MacOS defaults"
-#bash ~/.bin/osxdefaults.sh
+bash ~/.bin/osxdefaults.sh
 
 # Running mackup
-#mackup restore -f
+mackup restore -f
