@@ -126,7 +126,7 @@ fi
 eval "$(rbenv init - zsh)"
 
 source "$HOME/.rye/env"
-export PATH="$HOME/.rye/shims:$PATH"
+export OPENROUTER_API_KEY=$(llm keys get openrouter)
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
