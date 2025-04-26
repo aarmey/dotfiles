@@ -3,4 +3,4 @@
 #bash ~/.bin/osxdefaults.sh
 
 # Running mackup
-mackup restore -f
+# mackup restore -f
