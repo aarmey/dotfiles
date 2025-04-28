@@ -1,8 +1,2 @@
-signature.pdf
-Package Control.last-run
-.copy/Application Support/User/Package Control.cache
-oscrypto-ca-bundle.crt
-Package Control.merged-ca-bundle
-Package Control.user-ca-bundle
-vim/plugged
 .DS_Store
+.aider*
