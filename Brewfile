@@ -66,7 +66,7 @@ cask "slack"
 cask "steam"
 cask "sublime-text"
 cask "synology-drive"
-cask "tailscale"
+cask "tailscale-app"
 cask "visual-studio-code"
 cask "webex"
 cask "zen-browser"
@@ -76,7 +76,6 @@ mas "1Password for Safari", id: 1569813296
 mas "Ghostery Privacy Ad Blocker", id: 6504861501
 mas "Hush", id: 1544743900
 mas "Keynote", id: 409183694
-mas "LanguageTool", id: 1534275760
 vscode "github.copilot-chat"
 vscode "github.copilot"
 vscode "github.vscode-github-actions"
