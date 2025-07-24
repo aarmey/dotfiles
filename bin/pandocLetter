@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if [ "$1" = "" ]; then
- echo "Usage: `basename $0` <file> ..."
- exit
-fi
-
-pandoc --pdf-engine=xelatex --template=$HOME/.pandoc/letter-templ.tex $1 -o ${1%.*}.pdf
