@@ -6,5 +6,12 @@
     "editor.fontSize": 11,
     "workbench.tree.indent": 16,
     "makefile.configureOnOpen": false,
-    "jupyter.askForKernelRestart": false
+    "jupyter.askForKernelRestart": false,
+    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.diagnosticsSource": "Pyright",
+    "githubPullRequests.createOnPublishBranch": "never",
+    "github.copilot.enable": {
+        "quarto": false,
+        "typst": false
+    }
 }
