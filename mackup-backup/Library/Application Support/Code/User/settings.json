@@ -13,5 +13,6 @@
     "github.copilot.enable": {
         "quarto": false,
         "typst": false
-    }
+    },
+    "githubPullRequests.pullBranch": "never"
 }
