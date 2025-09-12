@@ -6,5 +6,9 @@
     "editor.fontSize": 11,
     "workbench.tree.indent": 16,
     "makefile.configureOnOpen": false,
-    "jupyter.askForKernelRestart": false
+    "jupyter.askForKernelRestart": false,
+    "workbench.colorTheme": "Default Light Modern",
+    "python.analysis.typeCheckingMode": "standard",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "githubPullRequests.pullBranch": "never"
 }
