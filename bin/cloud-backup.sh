@@ -27,7 +27,8 @@ rclone sync \
     --config "$RCLONE_CONFIG_FILE" \
     --progress \
     --delete-excluded \
-    --exclude-from <(echo ".DS_Store") \
+    --exclude ".DS_Store" \
+    --exclude "/Arq Backup Data/**" \
     "$RCLONE_REMOTE_PERSONAL" \
     "${LOCAL_BASE_DIR}/drive-personal"
 
@@ -45,7 +46,7 @@ rclone sync \
     --config "$RCLONE_CONFIG_FILE" \
     --progress \
     --delete-excluded \
-    --exclude-from <(echo ".DS_Store") \
+    --exclude ".DS_Store" \
     "$RCLONE_REMOTE_WORK" \
     "${LOCAL_BASE_DIR}/box-work"
 
