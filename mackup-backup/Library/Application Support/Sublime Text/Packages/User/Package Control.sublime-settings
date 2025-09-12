@@ -5,7 +5,9 @@
 	],
 	"installed_packages":
 	[
+		"Non Text Files",
 		"Package Control",
 		"Quarto",
+		"Terminal",
 	],
 }
