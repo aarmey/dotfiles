@@ -8,6 +8,8 @@
     "makefile.configureOnOpen": false,
     "jupyter.askForKernelRestart": false,
     "python.analysis.typeCheckingMode": "standard",
+    "workbench.colorTheme": "Default Light Modern",
+    "github.copilot.nextEditSuggestions.enabled": true,
     "python.analysis.diagnosticsSource": "Pyright",
     "githubPullRequests.createOnPublishBranch": "never",
     "github.copilot.enable": {
