@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export PATH="$HOME/.bin:$PATH"
+
 HISTSIZE=50000
 SAVEHIST=50000
 

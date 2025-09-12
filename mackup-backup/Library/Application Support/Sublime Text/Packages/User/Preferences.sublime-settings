@@ -4,4 +4,14 @@
 		"Vintage",
 	],
 	"index_files": true,
+	"open_externally_patterns":
+	[
+		"*.xls",
+		"*.jpg",
+	    "*.jpeg",
+	    "*.png",
+	    "*.gif",
+	    "*.zip",
+	    "*.pdf",
+	],
 }

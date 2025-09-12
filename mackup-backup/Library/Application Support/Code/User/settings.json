@@ -7,8 +7,14 @@
     "workbench.tree.indent": 16,
     "makefile.configureOnOpen": false,
     "jupyter.askForKernelRestart": false,
-    "workbench.colorTheme": "Default Light Modern",
     "python.analysis.typeCheckingMode": "standard",
+    "workbench.colorTheme": "Default Light Modern",
     "github.copilot.nextEditSuggestions.enabled": true,
+    "python.analysis.diagnosticsSource": "Pyright",
+    "githubPullRequests.createOnPublishBranch": "never",
+    "github.copilot.enable": {
+        "quarto": false,
+        "typst": false
+    },
     "githubPullRequests.pullBranch": "never"
 }
