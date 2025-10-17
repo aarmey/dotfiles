@@ -78,7 +78,6 @@ fi
 
 eval "$(rbenv init - zsh)"
 
-source "$HOME/.rye/env"
 export OPENROUTER_API_KEY=$(llm keys get openrouter)
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
