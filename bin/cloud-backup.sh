@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # --- Configuration ---
-LOCAL_BASE_DIR="/Volumes/Seagate 1/cloud-backup" # IMPORTANT: Change this to your desired local directory
+LOCAL_BASE_DIR="/Volumes/SmallDrive/cloud-backup"
 RCLONE_CONFIG_FILE="$HOME/.config/rclone/rclone.conf" # Default rclone config location
-RESTIC_REPO="/Volumes/Seagate 1/cloud-backup/restic" # IMPORTANT: Change this to your restic repository path
+RESTIC_REPO="/Volumes/SmallDrive/cloud-backup/restic"
 RESTIC_PASSWORD_FILE="$HOME/.restic_password" # IMPORTANT: Create this file with your restic password
                                             # or set RESTIC_PASSWORD environment variable
 
@@ -26,6 +26,7 @@ echo "--- Syncing ${RCLONE_REMOTE_PERSONAL} to ${LOCAL_BASE_DIR}/drive-personal 
 rclone sync \
     --config "$RCLONE_CONFIG_FILE" \
     --progress \
+    --drive-acknowledge-abuse \
     --delete-excluded \
     --exclude ".DS_Store" \
     --exclude "/Arq Backup Data/**" \
@@ -46,6 +47,7 @@ rclone sync \
     --config "$RCLONE_CONFIG_FILE" \
     --progress \
     --delete-excluded \
+    --exclude "/aretha-backup/**" \
     --exclude ".DS_Store" \
     "$RCLONE_REMOTE_WORK" \
     "${LOCAL_BASE_DIR}/box-work"
@@ -65,29 +67,12 @@ echo "Backing up: ${LOCAL_BASE_DIR}/drive-personal and ${LOCAL_BASE_DIR}/box-wor
 export RESTIC_REPOSITORY="$RESTIC_REPO"
 export RESTIC_PASSWORD_FILE="$RESTIC_PASSWORD_FILE"
 
-# Check if restic repository needs initialization
-if ! restic self-update > /dev/null 2>&1; then
-    echo "Restic is not installed or not in PATH. Please install Restic."
-    exit 1
-fi
-
-if ! restic snapshots > /dev/null 2>&1; then
-    echo "Restic repository not found or not initialized. Initializing repository..."
-    restic init
-    if [ $? -eq 0 ]; then
-        echo "Restic repository initialized successfully."
-    else
-        echo "ERROR: Failed to initialize Restic repository. Exiting."
-        exit 1
-    fi
-fi
-
 # Perform the backup
 restic backup \
-    --progress \
+    --verbose \
     --tag "cloud-sync-backup" \
-    --exclude "${LOCAL_BASE_DIR}/drive-personal/.DS_Store" \
-    --exclude "${LOCAL_BASE_DIR}/box-work/.DS_Store" \
+    --compression "max" \
+    --pack-size 128 \
     "${LOCAL_BASE_DIR}/drive-personal" \
     "${LOCAL_BASE_DIR}/box-work"
 
@@ -101,7 +86,8 @@ if [ $? -eq 0 ]; then
         --keep-weekly 4 \
         --keep-monthly 12 \
         --keep-yearly 1 \
-        --prune
+        --prune \
+        --repack-small
     if [ $? -eq 0 ]; then
         echo "Restic prune completed successfully."
     else

@@ -11,6 +11,8 @@ REMOTE_FOLDER="/Archive/Zotero"
 WEBDAV_USERNAME="webdav"
 WEBDAV_PASSWORD="2mdk^&slwmebdo"
 
+ADDRESS="$(tailscale ip --4)"
+
 # --- Script ---
 echo "Starting Rclone WebDAV proxy..."
 echo "Remote: ${REMOTE_NAME}:/${REMOTE_FOLDER}"
@@ -19,7 +21,7 @@ echo "Username: ${WEBDAV_USERNAME}"
 echo "Press Ctrl+C to stop the server."
 
 rclone serve webdav ${REMOTE_NAME}:${REMOTE_FOLDER} \
-    --addr 100.106.19.88:8080 \
+    --addr ${ADDRESS}:8080 \
     --addr 127.0.0.1:8080 \
     --user ${WEBDAV_USERNAME} \
     --pass ${WEBDAV_PASSWORD}
