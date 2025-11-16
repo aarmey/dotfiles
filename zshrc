@@ -46,7 +46,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos 1password tmux)
+plugins=(git macos 1password tmux eza)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,6 +63,10 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='subl'
 fi
+
+alias typst="quarto typst"
+alias pandoc="quarto pandoc"
+
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh

@@ -12,6 +12,10 @@ Plug 'airblade/vim-gitgutter'
 " vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
 
+" nvim-spectre
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-pack/nvim-spectre'
+
 " Command line colors
 Plug 'itchyny/lightline.vim'
 
@@ -23,9 +27,6 @@ Plug 'dhruvasagar/vim-table-mode'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
-" Julia Vim
-Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
 

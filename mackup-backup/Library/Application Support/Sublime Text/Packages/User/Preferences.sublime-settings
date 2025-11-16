@@ -14,4 +14,8 @@
 	    "*.zip",
 	    "*.pdf",
 	],
+	"theme": "Adaptive.sublime-theme",
+	"color_scheme": "auto",
+	"dark_color_scheme": "Mariana.sublime-color-scheme",
+	"light_color_scheme": "Sixteen.sublime-color-scheme",
 }
