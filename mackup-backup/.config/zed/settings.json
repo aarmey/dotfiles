@@ -1,0 +1,57 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ssh_connections": [
+    {
+      "host": "aretha",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/asm"
+          ]
+        },
+        {
+          "paths": [
+            "/home/asm/bi-cytok"
+          ]
+        }
+      ]
+    }
+  ],
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
+      "enterprise_uri": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "file_types": { "Markdown": ["qmd"] },
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "model_parameters": [],
+    "default_model": {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash"
+    }
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 11,
+  "theme": {
+    "mode": "system",
+    "light": "macOS Classic Light",
+    "dark": "macOS Classic Dark"
+  }
+}
