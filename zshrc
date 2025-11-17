@@ -64,7 +64,6 @@ else
   export EDITOR='subl'
 fi
 
-alias typst="quarto typst"
 alias pandoc="quarto pandoc"
 
 
@@ -83,6 +82,7 @@ alias pandoc="quarto pandoc"
 eval "$(rbenv init - zsh)"
 
 export OPENROUTER_API_KEY=$(llm keys get openrouter)
+export OPENAI_API_KEY=$(llm keys get openai)
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
