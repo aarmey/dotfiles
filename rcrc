@@ -1,2 +1,1 @@
-TAGS="macstudio macbook"
-EXCLUDES="README.md LICENSE bootstrap.sh mackup-backup"
+EXCLUDES="README.md LICENSE mackup-backup"

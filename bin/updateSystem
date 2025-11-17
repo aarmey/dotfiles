@@ -1,22 +1,14 @@
 #! /bin/bash
 
-duti -s com.vallettaventures.Texpad tex all
 duti -s com.sublimetext.3 public.plain-text all
 duti -s com.sublimetext.3 md all
 duti -s com.sublimetext.3 markdown all
-duti -s io.nteract.nteract ipynb all
 duti -s com.sublimetext.3 sublime-workspace all
 duti -s com.sublimetext.3 sublime-project all
 duti -s com.sublimetext.3 coffee all
 duti -s com.apple.Preview pdf all
 
-if hash tlmgr 2>/dev/null; then
-  tlmgr update --self
-  tlmgr update --all --reinstall-forcibly-removed
-fi
-
 ssh aretha 'sudo apt update; sudo apt upgrade'
-ssh aretha 'julia -e "using Pkg; using Dates; Pkg.update(); Pkg.gc(;collect_delay=Week(1))"'
 ssh aretha 'vim +PlugUpgrade +qall'
 ssh aretha 'vim +PlugUpdate +qall'
 
