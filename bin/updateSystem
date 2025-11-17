@@ -19,7 +19,6 @@ ssh aretha 'sudo apt update; sudo apt upgrade'
 ssh aretha 'julia -e "using Pkg; using Dates; Pkg.update(); Pkg.gc(;collect_delay=Week(1))"'
 ssh aretha 'vim +PlugUpgrade +qall'
 ssh aretha 'vim +PlugUpdate +qall'
-ssh winet 'sudo apt update; sudo apt upgrade'
 
 brew update
 
@@ -29,14 +28,8 @@ brew bundle cleanup --global --force
 
 brew cleanup
 
-mas upgrade
-
-julia -e "using Pkg; Pkg.update(); Pkg.gc()"
-
 vim +PlugUpgrade +qall
 
 vim +PlugUpdate +qall
 
 rm -rf ~/.Trash/*
-
-pip3 install --upgrade nbopen scipy numpy pandas scikit-learn
