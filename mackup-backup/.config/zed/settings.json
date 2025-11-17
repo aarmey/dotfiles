@@ -25,33 +25,23 @@
       ]
     }
   ],
-  "edit_predictions": {
-    "mode": "subtle",
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null,
-      "enterprise_uri": null
-    },
-    "enabled_in_text_threads": false
-  },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "file_types": { "Markdown": ["qmd"] },
   "agent": {
-    "default_profile": "write",
-    "always_allow_tool_actions": true,
-    "model_parameters": [],
     "default_model": {
       "provider": "openrouter",
-      "model": "google/gemini-2.5-flash"
-    }
+      "model": "openai/gpt-5.1-codex"
+    },
+    "model_parameters": []
   },
+  "base_keymap": "SublimeText",
   "ui_font_size": 14,
   "buffer_font_size": 11,
   "theme": {
     "mode": "system",
-    "light": "macOS Classic Light",
-    "dark": "macOS Classic Dark"
+    "light": "One Light",
+    "dark": "One Dark"
   }
 }
