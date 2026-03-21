@@ -1,104 +1,112 @@
-brew "bfg"
-brew "bib-tool"
-brew "bibtex-tidy"
-brew "broot"
-brew "colordiff"
-brew "diff-pdf"
-brew "diff-so-fancy"
-brew "dust"
-brew "duti"
-brew "ffmpeg"
-brew "fzf"
-brew "gh"
-brew "mactop"
-brew "gitbackup"
-brew "gnupg"
-brew "graphviz"
-brew "htop"
-brew "hugo"
-brew "iperf3"
-brew "eza"
-brew "jdupes"
-brew "lazygit"
-brew "lftp"
-brew "lychee"
-brew "mackup"
-brew "mas"
-brew "nmap"
-brew "par2"
-brew "rbenv"
-brew "rcm"
-brew "uv"
-brew "gnu-sed"
-brew "zpaq"
-brew "rclone"
-brew "typst"
-brew "rsync"
-brew "tmux"
-brew "vale"
-brew "pv"
-brew "wget"
-brew "restic"
-brew "zsh-autosuggestions"
-brew "zsh-completions"
-brew "zsh-syntax-highlighting"
-brew "zstd"
-brew "Dr-Emann/homebrew-tap/applesauce"
-cask "1password-cli"
-cask "1password"
-cask "adobe-creative-cloud"
-cask "arq"
-cask "bibdesk"
-cask "box-drive"
-cask "fiji"
-cask "macs-fan-control"
-cask "gitbutler"
-cask "omnifocus"
-cask "font-anonymous-pro"
-cask "font-comic-neue"
-cask "font-input"
-cask "font-liberation"
-cask "font-libre-caslon-text"
-cask "font-open-sans"
-cask "font-roboto"
-cask "font-source-code-pro"
-cask "font-iosevka"
-cask "ghostty"
-cask "logitech-presentation"
-cask "macwhisper"
-cask "microsoft-auto-update"
-cask "microsoft-excel"
-cask "microsoft-powerpoint"
-cask "microsoft-teams"
-cask "microsoft-word"
-cask "obsidian"
-cask "quarto"
-cask "reader"
-cask "refine"
-cask "skim"
-cask "slack"
-cask "gitbutler"
-cask "steam"
-cask "sublime-text"
-cask "google-drive"
-cask "tailscale-app"
-cask "webex"
-cask "zoom"
-cask "zotero"
-cask "aldente"
-cask "zen"
-cask "zed"
-mas "1Password for Safari", id: 1569813296
-mas "Ghostery Privacy Ad Blocker", id: 6504861501
-mas "Hush", id: 1544743900
-mas "Keynote", id: 409183694
+brew 'ag'
+brew 'autojump'
+brew 'bfg'
+brew 'bib-tool'
+brew 'bibtex-tidy'
+brew 'broot'
+brew 'colordiff'
+brew 'coreutils'
+brew 'diff-pdf'
+brew 'diff-so-fancy'
+brew 'Dr-Emann/homebrew-tap/applesauce'
+brew 'duf'
+brew 'dust'
+brew 'duti'
+brew 'eza'
+brew 'fd'
+brew 'ffmpeg'
+brew 'fzf'
+brew 'gemini-cli'
+brew 'gh'
+brew 'gitbackup'
+brew 'gnu-sed'
+brew 'gnupg'
+brew 'graphviz'
+brew 'helix'
+brew 'htop'
+brew 'hugo'
+brew 'iperf3'
+brew 'jdupes'
+brew 'lazygit'
+brew 'lftp'
+brew 'lychee'
+brew 'mackup'
+brew 'mactop'
+brew 'mas'
+brew 'mole'
+brew 'ncdu'
+brew 'nmap'
+brew 'par2'
+brew 'pv'
+brew 'rbenv'
+brew 'rclone'
+brew 'rcm'
+brew 'restic'
+brew 'rg'
+brew 'rsync'
+brew 'tmux'
+brew 'typst'
+brew 'uv'
+brew 'wget'
+brew 'zpaq'
+brew 'zsh-autosuggestions'
+brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
+brew 'zstd'
+cask '1password'
+cask '1password-cli'
+cask 'adobe-creative-cloud'
+cask 'aldente'
+cask 'arq'
+cask 'bibdesk'
+cask 'box-drive'
+cask 'busycal'
+cask 'claude-code'
+cask 'font-anonymous-pro'
+cask 'font-comic-neue'
+cask 'font-input'
+cask 'font-iosevka'
+cask 'font-liberation'
+cask 'font-libre-caslon-text'
+cask 'font-open-sans'
+cask 'font-roboto'
+cask 'font-source-code-pro'
+cask 'font-symbols-only-nerd-font'
+cask 'ghostty'
+cask 'hiddenbar'
+cask 'logitech-presentation'
+cask 'macwhisper'
+cask 'microsoft-auto-update'
+cask 'microsoft-excel'
+cask 'microsoft-powerpoint'
+cask 'microsoft-teams'
+cask 'microsoft-word'
+cask 'obsidian'
+cask 'photosweeper-x'
+cask 'quarto'
+cask 'reader'
+cask 'refine'
+cask 'skim'
+cask 'slack'
+cask 'steam'
+cask 'sublime-text'
+cask 'tailscale-app'
+cask 'webex'
+cask 'zed'
+cask 'zen'
+cask 'zoom'
+cask 'zotero'
+mas '1Password for Safari', id: 1569813296
+mas 'Ghostery Privacy Ad Blocker', id: 6504861501
+mas 'Hush', id: 1544743900
+mas 'Keynote', id: 361285480
 
 # require 'socket'
 
 # hostname = Socket.gethostname
-# puts "The hostname is: #{hostname}"
+# puts 'The hostname is: #{hostname}'
 
 # if hostname == 'Aarons-Mac-Studio.local'
-#     cask "hyperbackupexplorer"
-#    cask "fuse-t"
+#     cask 'hyperbackupexplorer'
+#    cask 'fuse-t'
 # end

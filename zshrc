@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.bin:$PATH"
 
 HISTSIZE=50000
 SAVEHIST=50000
@@ -46,7 +46,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos 1password tmux eza)
+plugins=(macos tmux eza)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,11 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='subl'
-fi
+export EDITOR='helix'
 
 alias pandoc="quarto pandoc"
 
@@ -80,8 +76,8 @@ alias pandoc="quarto pandoc"
 
 eval "$(rbenv init - zsh)"
 
-export OPENROUTER_API_KEY=$(llm keys get openrouter)
-export OPENAI_API_KEY=$(llm keys get openai)
-
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
