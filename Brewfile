@@ -104,12 +104,13 @@ mas 'Ghostery Privacy Ad Blocker', id: 6504861501
 mas 'Hush', id: 1544743900
 mas 'Keynote', id: 361285480
 
-# require 'socket'
+require 'socket'
 
-# hostname = Socket.gethostname
-# puts 'The hostname is: #{hostname}'
+hostname = Socket.gethostname
+puts 'The hostname is: #{hostname}'
 
-# if hostname == 'Aarons-Mac-Studio.local'
-#     cask 'hyperbackupexplorer'
-#    cask 'fuse-t'
-# end
+if hostname == 'Aarons-Mac-Studio.local'
+    brew "ollama"
+#    cask "hyperbackupexplorer"
+#    cask "fuse-t"
+end

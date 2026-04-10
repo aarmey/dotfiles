@@ -82,10 +82,10 @@ if [ $? -eq 0 ]; then
     echo "--- Restic Prune (optional, recommended for space saving) ---"
     # Example policy: keep 7 daily, 4 weekly, 12 monthly, all yearly
     restic forget \
-        --keep-daily 7 \
-        --keep-weekly 4 \
-        --keep-monthly 12 \
-        --keep-yearly 1 \
+        --keep-daily 14 \
+        --keep-weekly 8 \
+        --keep-monthly 24 \
+        --keep-yearly 2 \
         --prune \
         --repack-small
     if [ $? -eq 0 ]; then
