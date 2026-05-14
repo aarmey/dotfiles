@@ -105,12 +105,13 @@ mas 'uBlock Origin Lite', id: 6_745_342_698
 mas 'Hush', id: 1_544_743_900
 mas 'Keynote', id: 361_285_480
 
-# require 'socket'
+require 'socket'
 
-# hostname = Socket.gethostname
-# puts 'The hostname is: #{hostname}'
+hostname = Socket.gethostname
+puts 'The hostname is: #{hostname}'
 
-# if hostname == 'Aarons-Mac-Studio.local'
-#     cask 'hyperbackupexplorer'
-#    cask 'fuse-t'
-# end
+if hostname == 'Aarons-Mac-Studio.local'
+    brew "ollama"
+#    cask "hyperbackupexplorer"
+#    cask "fuse-t"
+end
