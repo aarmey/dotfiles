@@ -109,8 +109,7 @@ require 'socket'
 hostname = Socket.gethostname
 puts 'The hostname is: #{hostname}'
 
-if hostname == 'Aarons-Mac-Studio.local'
-    brew "ollama"
+# if hostname == 'Aarons-Mac-Studio.local'
 #    cask "hyperbackupexplorer"
 #    cask "fuse-t"
-end
+# end
