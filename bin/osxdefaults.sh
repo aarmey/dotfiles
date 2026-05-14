@@ -5,5 +5,9 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+# Reduce the spacing between toolbar icons
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 12
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 8
+
 # Apply the settings
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u

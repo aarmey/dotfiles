@@ -1,5 +1,6 @@
 brew 'ag'
 brew 'autojump'
+brew 'agavra/tap/tuicr'
 brew 'bfg'
 brew 'bib-tool'
 brew 'bibtex-tidy'
@@ -36,6 +37,7 @@ brew 'mole'
 brew 'ncdu'
 brew 'neovim'
 brew 'nmap'
+brew 'opencode'
 brew 'par2'
 brew 'pv'
 brew 'rbenv'
@@ -76,7 +78,6 @@ cask 'font-roboto'
 cask 'font-source-code-pro'
 cask 'font-symbols-only-nerd-font'
 cask 'ghostty'
-cask 'hiddenbar'
 cask 'logitech-presentation'
 cask 'macwhisper'
 cask 'microsoft-auto-update'
@@ -99,10 +100,10 @@ cask 'zed'
 cask 'zen'
 cask 'zoom'
 cask 'zotero'
-mas '1Password for Safari', id: 1569813296
-mas 'Ghostery Privacy Ad Blocker', id: 6504861501
-mas 'Hush', id: 1544743900
-mas 'Keynote', id: 361285480
+mas '1Password for Safari', id: 1_569_813_296
+mas 'uBlock Origin Lite', id: 6_745_342_698
+mas 'Hush', id: 1_544_743_900
+mas 'Keynote', id: 361_285_480
 
 require 'socket'
 
