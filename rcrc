@@ -1,1 +1,3 @@
-EXCLUDES="README.md LICENSE mackup-backup"
+EXCLUDES="README.md LICENSE"
+SYMLINK_DIRS="config/nvim config/ghostty config/zed"
+UNDOTTED="Library"

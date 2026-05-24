@@ -10,21 +10,27 @@
   "semantic_tokens": "combined",
   "diff_view_style": "unified",
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "languages": {
     "Python": {
-      "language_servers": ["ty", "!basedpyright", "..."]
-    }
+      "language_servers": ["ty", "!basedpyright", "!pyright", "..."],
+      "formatter": {
+        "external": {
+          "command": "ruff format",
+          "arguments": ["-"],
+        },
+      },
+    },
   },
   "outline_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "git_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "language_models": {
     "openai_compatible": {
@@ -41,20 +47,20 @@
               "images": true,
               "parallel_tool_calls": true,
               "prompt_cache_key": true,
-              "chat_completions": true
-            }
-          }
-        ]
-      }
-    }
+              "chat_completions": true,
+            },
+          },
+        ],
+      },
+    },
   },
-  "format_on_save": "off",
+  "format_on_save": "on",
   "edit_predictions": {
     "open_ai_compatible_api": {
       "model": "gemma-4-31b-it-mxfp8",
-      "api_url": "http://100.117.161.105:8000/v1"
+      "api_url": "http://100.117.161.105:8000/v1",
     },
-    "provider": "zed"
+    "provider": "zed",
   },
   "ssh_connections": [
     {
@@ -79,6 +85,11 @@
       "projects": [
         {
           "paths": [
+            "/home/asm/FastPIDC.jl"
+          ]
+        },
+        {
+          "paths": [
             "/home/asm/vc-graph"
           ]
         }
@@ -89,6 +100,11 @@
       "username": "asm",
       "args": [],
       "projects": [
+        {
+          "paths": [
+            "/Users/asm/Code/ULTRA"
+          ]
+        },
         {
           "paths": [
             "/Users/asm/Code/point-contact"
@@ -102,15 +118,15 @@
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.6",
-      "enable_thinking": false
+      "enable_thinking": false,
     },
     "dock": "right",
     "default_profile": "ask",
     "default_model": {
       "provider": "Mac Studio Qwen",
-      "model": "Qwen3.6-35B-A3B-mlx-mxfp8"
+      "model": "Qwen3.6-35B-A3B-mlx-mxfp8",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   "base_keymap": "SublimeText",
   "ui_font_size": 14,
@@ -118,6 +134,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
-  }
+    "dark": "One Dark",
+  },
 }
