@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
+echo "Installing Homebrew packages from Brewfile..."
+brew bundle --global
