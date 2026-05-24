@@ -72,3 +72,34 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# Chezmoi Status Check on Terminal Startup
+if command -v chezmoi &> /dev/null; then
+    # 1. Quick Local Check: Did I change a file in $HOME but forget to track it?
+    # (chezmoi status shows files that differ from the source state)
+    LOCAL_CHANGES=$(chezmoi status)
+    if [ -n "$LOCAL_CHANGES" ]; then
+        echo -e "\n\033[1;33m⚠️  [Chezmoi] You have uncommitted or unapplied local dotfile changes:\033[0m"
+        echo "$LOCAL_CHANGES"
+    fi
+
+    # 2. Daily Remote Check: Am I behind my GitHub repo?
+    # Throttled to once every 24 hours so your terminal opens instantly.
+    CACHE_FILE="$HOME/.cache/chezmoi_remote_check"
+    mkdir -p "$(dirname "$CACHE_FILE")"
+
+    # If cache doesn't exist or is older than 1 day (86400 seconds)
+    if [ ! -f "$CACHE_FILE" ] || [ $(( $(date +%s) - $(date -r "$CACHE_FILE" +%s) )) -gt 86400 ]; then
+        touch "$CACHE_FILE"
+        # Run a background fetch so we don't block the terminal text
+        (
+            cd "$(chezmoi source-path)" && git fetch &> /dev/null
+            LOCAL=$(cd "$(chezmoi source-path)" && git rev-parse @)
+            REMOTE=$(cd "$(chezmoi source-path)" && git rev-parse @{u})
+            if [ "$LOCAL" != "$REMOTE" ]; then
+                echo -e "\n\033[1;36m🔄 [Chezmoi] Your remote GitHub repo has changes. Run 'chezmoi update'!\033[0m"
+            fi
+        ) & disown
+    fi
+fi
+
